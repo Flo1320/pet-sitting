@@ -850,7 +850,7 @@
             }
 
             .theme-btn {
-                width: 100%;
+                width: 180%;
                 border-radius: 25px;
             }
 
@@ -1204,4 +1204,5 @@
   .footer-center {
     order: 3;
   }
+
 }
