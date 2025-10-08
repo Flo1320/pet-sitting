@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+
+    <title>Complice des 4 Pattes - Pet Sitting Marly</title>
+</head>
+<body data-theme="light">
+<!-- Navigation -->
+<nav>
+    <div class="nav-brand" onclick="showPage('accueil')">
+        <img src="logo.png" alt="Logo" class="logo-img">
+        <div class="brand-text">
+            <h1>Complice des 4 Pattes</h1>
+            <p>Pet Sitting à Marly</p>
+        </div>
+    </div>
+
+    <div class="burger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <ul class="nav-menu" id="navMenu">
+        <li><a href="#" onclick="showPage('accueil'); closeMenu()">Accueil</a></li>
+        <li><a href="#" onclick="showPage('services'); closeMenu()">Services</a></li>
+        <li><a href="#" onclick="showPage('tarifs'); closeMenu()">Tarifs</a></li>
+        <li><a href="#" onclick="showPage('apropos'); closeMenu()">À Propos</a></li>
+        <li><a href="#" onclick="showPage('souvenirs'); closeMenu()">Galerie</a></li>
+        <li><button class="theme-btn" onclick="toggleTheme()">🌙</button></li>
+    </ul>
+</nav>
+
+<!-- Page Accueil -->
+<div id="accueil" class="page active">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Votre partenaire <span class="highlight">de confiance</span> pour vos animaux</h1>
+                <p>Pet-sitting professionnel à Marly et ses alentours. Promenades, visites à domicile et soins personnalisés pour le bonheur de vos compagnons.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="showPage('services')">Découvrir nos services</button>
+                    <button class="btn btn-secondary" onclick="showPage('tarifs')">Voir les tarifs</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-visual">
+                    <div class="visual-text">Votre animal mérite<br>le meilleur</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>5+</h3>
+                <p>Années d'expérience</p>
+            </div>
+            <div class="stat-card">
+                <h3>100%</h3>
+                <p>Clients satisfaits</p>
+            </div>
+            <div class="stat-card">
+                <h3>7j/7</h3>
+                <p>Disponibilité</p>
+            </div>
+            <div class="stat-card">
+                <h3>15km</h3>
+                <p>Rayon d'action</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="services">
+        <div class="section-header">
+            <h2>Nos Services Principaux</h2>
+            <p>Des prestations adaptées aux besoins de chaque animal</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🏠</div>
+                <h3>Visites à Domicile</h3>
+                <p>Je prends soin de vos compagnons dans le confort de leur maison. Alimentation, câlins et moments de jeu garantis pour leur bien-être quotidien.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🚶</div>
+                <h3>Promenades Personnalisées</h3>
+                <p>Des balades adaptées aux besoins de votre animal, qu'il soit sportif ou préfère la tranquillité. Chaque sortie est pensée pour son épanouissement.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💊</div>
+                <h3>Administration de Médicaments</h3>
+                <p>Suivi rigoureux et administration en douceur des traitements prescrits par votre vétérinaire, pour la santé de votre compagnon.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Page Services -->
+<div id="services" class="page">
+    <section class="services">
+        <div class="section-header">
+            <br><br>
+            <h2>Tous nos Services</h2>
+            <p>Une gamme complète de prestations pour le bien-être de vos animaux</p>
+        </div>
+        <div class="services-grid-full">
+            <div class="service-card">
+                <div class="service-icon">🐶</div>
+                <h3>Promenade de chien</h3>
+                <h4>Durée : 30 Minutes à 1 Heure</h4>
+                <h4>En individuel ou en duo compatible</h4>
+                <h4>Quotidiennement ou sur commande</h4>
+                <p>Pour les toutous qui s'ennuient durant vos absences ! Chaque balade est rythmée spécialement pour votre animal.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🐕</div>
+                <h3>Promenade / Visite Spécial Chiot</h3>
+                <h4>Durée : 30 Minutes</h4>
+                <h4>Découverte du monde en douceur</h4>
+                <h4>Une aide pour les premiers jours stressants</h4>
+                <p>Un service spécialement adapté pour les débuts de vie d'un chiot, avec une approche douce et rassurante.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🐱</div>
+                <h3>Visite à Domicile - Chien et Chat</h3>
+                <h4>Durée : 15 Minutes à 1 Heure</h4>
+                <h4>Jeux, câlins, surveillance et nettoyage</h4>
+                <h4>Administration d'un traitement (Sauf injections)</h4>
+                <p>En venant chez vous, je m'occupe de vos animaux comme si c'était les miens, dans le respect de leurs habitudes.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🐹</div>
+                <h3>Visite à Domicile - NAC</h3>
+                <h4>Durée : 15 Minutes à 1 Heure</h4>
+                <h4>Jeux, câlins, surveillance et nettoyage</h4>
+                <h4>Administration d'un traitement (Sauf injections)</h4>
+                <p>Une attention particulière même pour nos nouveaux animaux de compagnie ! Lapins, rongeurs, oiseaux...</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Page Tarifs -->
+<div id="tarifs" class="page">
+    <section class="pricing">
+        <div class="section-header">
+            <br><br>
+            <h2>Nos Tarifs</h2>
+            <p>Des prestations de qualité à des prix transparents</p>
+            <p style="font-size:small;"><i><u>Tarifs exprimés TTC ( TVA non applicable - régime auto-entrepreneur, art. 293 B du CGI )</u></i></p>
+        </div>
+            <h3 style="text-align: center;">Tarifs Promenades Chien</h3>
+            <p style="text-align: center;"><i>Pour toute durée autre, cela se fera sur devis. Tarifs n'incluant pas les frais kilométriques.</i></p>
+            <br>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Tarif 1 heure</h3>
+                <div class="price">25€</div>
+                <p>Spécialement dédiée pour les chiens ayant plus de besoin. Courir, renifler, jouer, c'est le moment !</p>
+            </div>
+            <div class="price-card">
+                <h3>Tarif 30 minutes</h3>
+                <div class="price">15€</div>
+                <p>Idéal pour une petite sortie dans le quartier ou dans le jardin. Aussi fait pour les chiens fragiles ou même un peu pantouflard !</p>
+            </div>
+        </div>
+        <br><br>
+            <h3 style="text-align: center;">Tarifs Visites / Promenades Spécial Chiot</h3>
+            <p style="text-align: center;"><i>Pour toute durée autre, cela se fera sur devis. Tarifs n'incluant pas les frais kilométriques.</i></p>
+            <br>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Tarif 30 Minutes</h3>
+                <div class="price">17€</div>
+                <p>Besoin de découvertes, de temps et de patience. N'hésitez plus !</p>
+            </div>
+        </div>
+        <br><br>
+            <h3 style="text-align: center;">Tarifs Visites pour Chiens et Chats</h3>
+            <p style="text-align: center;"><i>Pour toute durée autre, cela se fera sur devis. Tarifs n'incluant pas les frais kilométriques.</i></p>
+            <br>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Tarif 30 Minutes</h3>
+                <div class="price">15€</div>
+                <p>Pour venir chouchouter votre animal pendant votre absence. Idéale pour tout type de comportement.</p>
+            </div>
+            <div class="price-card">
+                <h3>Tarif 15 Minutes</h3>
+                <div class="price">12€</div>
+                <p>Cette offre est <b>réservé aux chats</b> indépendants, n'ayant besoin que d'un changement rapide de gamelles, d'un nettoyage de litière ou autre.</p>
+            </div>
+            <div class="price-card">
+                <h3>Tarif 1 Heure</h3>
+                <div class="price">25€</div>
+                <p>Votre chien a besoin d'une grande présence, de très bonnes séances de jeu intérieur ou votre chat adore les câlins pendants des heures, cette offre est faîte pour vous !</p>
+            </div>
+        </div>
+        <br><br>
+            <h3 style="text-align: center;">Tarifs Visite pour NAC's</h3>
+            <p style="text-align: center;"><i>Pour toute durée autre, cela se fera sur devis. Tarifs n'incluant pas les frais kilométriques.</i></p>
+            <br>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Tarif 15 Minutes</h3>
+                <div class="price">12€</div>
+                <p>Agir vite et bien ! Redonner à manger, quelques papouilles pour les plus tactiles ou simplement une vérification que tout va bien, c'est ce qu'il vous faut !</p>
+            </div>
+            <div class="price-card">
+                <h3>Tarif 30 Minutes</h3>
+                <div class="price">15€</div>
+                <p>Offre plus longue pour un nettoyage de cage, une petite balade sous surveillance dans votre logement. Un moment privilégié avec votre animal pour plus de douceur !</p>
+            </div>
+            <div class="price-card">
+                <h3>Tarif 1 Heure</h3>
+                <div class="price">25€</div>
+                <p>Vous avez plusieurs NAC et vous voulez que tout soit parfait ! Ou votre Lapin adore les sorties longues dans le jardin ? Je vous propose cette offre pour mieux les satisfaire.</p>
+            </div>
+        </div>
+                <br><br>
+        <h3 style="text-align: center;">Services inclus dans les prestations</h3>
+        <div class="about-content" style="max-width: 1000px; margin: 2rem auto; background: var(--card-bg); padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px var(--shadow);">
+            <p>Pendant les prestations longues, je vous propose des services inclus dans les frais de la prestation :</p>
+            <ul style="list-style: none; margin-top: 1rem;">
+                <li>• Bref nettoyage des sols en cas de dégâts pendant mon absence</li>
+                <li>• Arrosage des plantes</li>
+                <li>• Récupération du courrier (si l’accès à la boîte aux lettres est possible)</li>
+                <li>• Administration des traitements au besoin (avec ordonnance obligatoire)</li>
+            </ul>
+        </div>
+
+        <br>
+        <h3 style="text-align: center;">Frais supplémentaires</h3>
+        <div class="about-content" style="max-width: 1000px; margin: 2rem auto; background: var(--card-bg); padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px var(--shadow);">
+            <h4 style="color: var(--accent-primary); margin-bottom: 0.8rem;">Pré-visite : <b>+12€</b></h4>
+            <p><b>Rencontre obligatoire</b> pour faire connaissance avec vous et vos animaux, comprendre vos besoins et vos attentes. <b>Signature du devis</b>, <b>remplissage des documents d'information</b> (si non faits électroniquement) et <b>remise des clés.</b></p>
+
+            <h4 style="color: var(--accent-primary); margin-top: 1.5rem; margin-bottom: 0.8rem;">Remise de clés :</h4>
+            <ul style="list-style: none;">
+                <li>• Remise dans la boîte aux lettres après la dernière prestation : <b>Gratuit</b></li>
+                <li>• Remise en main propre lors d’un rendez-vous : <b>+10€</b></li>
+            </ul>
+        </div>
+
+        <br>
+        <h3 style="text-align: center;">Frais de déplacement</h3>
+        <div class="about-content" style="max-width: 1000px; margin: 2rem auto; background: var(--card-bg); padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px var(--shadow);">
+            <ul style="list-style: none;">
+                <li>• Marly et 10 km autour : <b>Gratuit</b></li>
+                <li>• Entre 10 et 15 km de Marly : <b>+2€</b></li>
+                <li>• Entre 15 et 20 km de Marly : <b>+5€</b></li>
+                <li>• Au-dessus de 20 km : <b>Frais sur devis</b></li>
+            </ul>
+        </div>
+
+    </section>
+</div>
+
+<!-- Page À Propos -->
+<div id="apropos" class="page">
+    <section id="about" class="section">
+        <br><br><br><br><br><br>
+  <h2 style="text-align: center;">À propos de moi</h2>
+
+  <!-- 👤 Photo de présentation -->
+<div class="about-photo-container">
+  <img src="images/portrait.webp" alt="Portrait de Complice des 4 Pattes" class="about-photo">
+</div>
+
+
+  <div class="about-content" style="max-width: 1000px; margin: 2rem auto; background: var(--card-bg); padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px var(--shadow);">
+    <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">En quelques mots...</h3>
+    <p>
+      Je m'appelle <b>Anaïs</b> et je propose de prendre soin de vos animaux, vos loulous préférés, comme si c'était les miens !<br><br>
+      Une professionnelle dévouée et passionnée à qui vous pourrez accorder toute votre confiance.<br>
+      Leur bonheur et leur bien-être sont mes priorités, c'est pourquoi je me forme en continu pour satisfaire au mieux les animaux qui m'entourent.
+    </p>
+  </div>
+
+  <div class="about-content certifications-section" style="position: relative; max-width: 1000px; margin: 2rem auto; background: var(--card-bg); padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px var(--shadow); overflow: hidden;">
+  <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">Mes Certifications & Labels</h3>
+  <ul style="list-style: none; margin-bottom: 1.5rem;">
+    <li>• Diplômée dans l’éducation et le comportement canin</li>
+    <li>• Titulaire de l’<b>ACACED complet</b></li>
+    <li>• Détentrice du <b>Label Professionnel</b> garantissant qualité, transparence et sérieux des prestations</li>
+  </ul>
+  <p style="color: var(--text-secondary); font-style: italic;">
+    Ces certifications attestent de mon engagement à offrir un service professionnel, bienveillant et adapté à chaque animal.
+  </p>
+  <br><br><br><br><br>
+  <!-- Logos des labels -->
+  <img src="images/label-left.png" alt="Label gauche" class="label-logo label-left">
+  <img src="images/label-right.png" alt="Label droite" class="label-logo label-right">
+</div>
+
+</section>
+
+</div>
+
+<!-- Page Galerie -->
+<div id="souvenirs" class="page">
+    <section class="gallery">
+        <div class="section-header">
+            <br><br>
+            <h2>Galerie Souvenirs</h2>
+            <p class="gallery-intro">Quelques moments magiques partagés avec mes petits protégés</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/balade-parc.webp" alt="Balade au parc" class="gallery-image">
+                <!-- <p class="gallery-caption">Balade au parc</p> -->
+            </div>
+            <div class="gallery-item">
+                <img src="images/image-2.webp" alt="Moment câlin" class="gallery-image">
+                <!-- <p class="gallery-caption">Moment câlin</p> -->
+            </div>
+            <div class="gallery-item">
+                <img src="images/image-4.webp" alt="Temps de jeu" class="gallery-image">
+                <!-- <p class="gallery-caption">Temps de jeu</p> -->
+            </div>
+            <div class="gallery-item">
+                <img src="images/image-5.jpg" alt="Exploration nature" class="gallery-image">
+                <!-- <p class="gallery-caption">Exploration nature</p> -->
+            </div>
+            <div class="gallery-item">
+                <img src="images/image-7.webp" alt="Sieste méritée" class="gallery-image">
+                <!-- <p class="gallery-caption">Sieste méritée</p> -->
+            </div>
+            <div class="gallery-item">
+                <img src="images/image-8.jpg" alt="Moments précieux" class="gallery-image">
+                <!-- <p class="gallery-caption">Moments précieux</p> -->
+            </div>
+        </div>
+        <p class="gallery-note">Vos compagnons aussi auront leur place dans cette galerie !</p>
+
+        <div style="margin-top: 4rem; text-align: center;">
+            <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">✨ Ils m’ont fait confiance ✨</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 2rem;">Découvrez ce que mes clients pensent de Complice des 4 Pattes 🐾</p>
+
+              <!-- 🖼️ Galerie d'avis -->
+                <div class="avis-images">
+                    <img src="images/avis-1.jpg" alt="Avis client 1" class="avis-image" onclick="openLightbox(this.src)">
+                    <img src="images/avis-2.jpg" alt="Avis client 2" class="avis-image" onclick="openLightbox(this.src)">
+                    <img src="images/avis-3.jpg" alt="Avis client 3" class="avis-image" onclick="openLightbox(this.src)">
+                    <img src="images/avis-4.jpg" alt="Avis client 3" class="avis-image" onclick="openLightbox(this.src)">
+                </div>
+                </div>
+
+                <!-- 🪩 Lightbox -->
+                <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                <span class="close-lightbox">&times;</span>
+                <img id="lightbox-img" class="lightbox-content" alt="Agrandissement de l'avis">
+                </div>
+
+            <script src="https://elfsightcdn.com/platform.js" async></script>
+            <div class="elfsight-app-639837c9-5622-4c06-ad8a-96274e4767c0" data-elfsight-app-lazy hidden></div>
+        </div>
+        <!-- ✅ Fin des avis Google -->
+    </section>
+</div>
+
+<!-- Contact Section -->
+<section class="contact">
+    <div class="contact-content">
+        <div class="contact-header">
+            <h2>Contactez-moi</h2>
+            <p>Je suis à votre écoute pour toute question</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <h4>Téléphone</h4>
+                <p>06 51 20 92 01</p>
+            </div>
+            <div class="contact-item">
+                <h4>Email</h4>
+                <p>complice4pattes@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <h4>Zone d'intervention</h4>
+                <p>Marly et 15km alentours</p>
+            </div>
+            <div class="contact-item">
+                <h4>Disponibilité</h4>
+                <p>7j/7 • Horaires flexibles</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-left">
+    <div class="footer-column">
+      <a href="images/CGV.pdf" target="_blank">Mentions légales et CGV</a>
+      <a href="images/charte.pdf" target="_blank">Charte du pet-sitting éthique</a>
+    </div>
+  </div>
+
+  <div class="footer-center">
+    <p>© 2025 Complice des 4 Pattes — Tous droits réservés <br>Fait Par <a href="https://flo1320.github.io/flo.github.io/" target="_blank">Florian Prud'homme</a></p>
+  </div>
+
+  <div class="footer-right">
+    <a href="https://www.facebook.com/people/Complice-Des-Quatre-Pattes/61578769294543/" target="_blank" aria-label="Facebook">
+      <img src="images/icons8-facebook.svg" alt="Facebook" class="social-icon">
+    </a>
+    <a href="https://www.complice4pattes.fr/website/social/linkedin" target="_blank" aria-label="LinkedIn">
+      <img src="images/icons8-linkedin.svg" alt="LinkedIn" class="social-icon">
+    </a>
+    <a href="https://www.instagram.com/complice_des_quatre_pattes/?utm_source=ig_web_button_share_sheet" target="_blank" aria-label="Instagram">
+      <img src="images/icons8-instagram-96.png" alt="Instagram" class="social-icon">
+    </a>
+  </div>
+</footer>
+
+<!-- Lightbox (image plein écran) -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Image en grand">
+</div>
+
+</body>
+</html>
